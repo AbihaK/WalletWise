@@ -1,8 +1,3 @@
-Chart.defaults.color = "#cbd5e1";
-Chart.defaults.borderColor = "rgba(255, 255, 255, 0.08)";
-const CHART_COLORS = ["#11a58f", "#7c3aed", "#2dd4bf", "#f59e0b", "#ec4899", "#60a5fa", "#a3e635", "#f87171"];
-datasets: [{ data: byCategory.map(c => c.total), backgroundColor: CHART_COLORS, borderColor: "#0e0f14" }]
-datasets: [{ label: "Spent (₹)", data: totals, backgroundColor: "#11a58f", borderRadius: 6 }]
 const API = "http://127.0.0.1:5000/api";
 
 const chartsReady = typeof Chart !== "undefined";
