@@ -1,0 +1,275 @@
+selector {
+  property: value;
+}
+:root {
+  --bg: #050507;
+  --card: #0e0f14;
+  --teal: #11a58f;
+  --teal-light: #2dd4bf;
+  --purple: #7c3aed;
+  --text: #ffffff;
+  --muted: #a1a1aa;
+  --line: #2a2c36;
+  --danger: #ef4444;
+  --warn: #f59e0b;
+  --ok: #22c55e;
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: var(--bg);
+  background-image:
+    radial-gradient(circle at 15% 0%, rgba(17, 165, 143, 0.18), transparent 40%),
+    radial-gradient(circle at 90% 100%, rgba(124, 58, 237, 0.18), transparent 40%);
+  background-attachment: fixed;
+  color: var(--text);
+  line-height: 1.5;
+}
+header {
+  text-align: center;
+  padding: 36px 16px 20px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.6rem;
+  letter-spacing: 1px;
+  background: linear-gradient(90deg, var(--teal-light), var(--purple));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+header p {
+  margin: 6px 0 0;
+  color: var(--muted);
+  font-size: 1.1rem;
+}
+main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.card {
+  background:
+    linear-gradient(var(--card), var(--card)) padding-box,
+    linear-gradient(135deg, var(--teal), var(--purple)) border-box;
+  border: 2px solid transparent;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+.wide {
+  grid-column: 1 / -1;
+  overflow-x: auto;
+}
+
+h2 {
+  margin: 0 0 14px;
+  font-size: 1.15rem;
+  color: var(--teal-light);
+}
+textarea,
+input,
+select {
+  width: 100%;
+  padding: 11px 12px;
+  margin-bottom: 10px;
+  background: #15161d;
+  color: var(--text);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-family: inherit;
+}
+
+textarea {
+  height: 90px;
+  resize: vertical;
+}
+
+textarea::placeholder,
+input::placeholder {
+  color: #6b6f7b;
+}
+
+textarea:focus,
+input:focus,
+select:focus {
+  outline: none;
+  border-color: var(--teal);
+  box-shadow: 0 0 0 3px rgba(17, 165, 143, 0.25);
+}
+
+button {
+  background: linear-gradient(135deg, var(--teal), var(--purple));
+  color: white;
+  border: 0;
+  padding: 11px 18px;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.15s, opacity 0.15s;
+}
+
+button:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+button:active {
+  transform: translateY(0);
+}
+.row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.row input {
+  flex: 1;
+  min-width: 90px;
+  margin-bottom: 0;
+}
+
+.or {
+  text-align: center;
+  color: var(--muted);
+  margin: 14px 0;
+  font-size: 0.9rem;
+}
+
+#msg {
+  min-height: 1.4em;
+  margin: 10px 0 0;
+  font-weight: 600;
+}
+.bar {
+  background: #1d1f29;
+  border-radius: 999px;
+  height: 14px;
+  margin-top: 14px;
+  overflow: hidden;
+}
+
+#barFill {
+  height: 100%;
+  width: 0;
+  background: var(--teal);
+  border-radius: 999px;
+  transition: width 0.5s ease;
+}
+
+#budgetText {
+  margin: 10px 0 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.alert {
+  color: var(--danger);
+  font-weight: 700;
+  margin: 8px 0 0;
+}
+#insights {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#insights li {
+  background: #15161d;
+  border-left: 4px solid var(--teal);
+  border-radius: 8px;
+  padding: 10px 12px;
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th {
+  text-align: left;
+  color: var(--teal-light);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+th,
+td {
+  padding: 10px 8px;
+  border-bottom: 1px solid var(--line);
+  font-size: 0.95rem;
+}
+
+tbody tr:hover {
+  background: rgba(17, 165, 143, 0.08);
+}
+
+.del {
+  background: transparent;
+  border: 1px solid var(--danger);
+  color: var(--danger);
+  padding: 5px 12px;
+  font-size: 0.85rem;
+}
+
+.del:hover {
+  background: var(--danger);
+  color: white;
+}
+
+#filter {
+  max-width: 260px;
+}
+
+select option {
+  background: #15161d;
+  color: var(--text);
+}
+canvas {
+  max-width: 100%;
+}
+
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  main {
+    padding: 12px;
+    gap: 14px;
+  }
+
+  .card {
+    padding: 16px;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+
+  .row button {
+    width: 100%;
+  }
+
+  th,
+  td {
+    padding: 8px 6px;
+    font-size: 0.85rem;
+  }
+}
